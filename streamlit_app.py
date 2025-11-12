@@ -13,10 +13,6 @@ st.write(
 #Add name of customer
 name_on_order = st.text_input("Name on Smoothie: ")
 st.write("The name on your smoothie will be: ", name_on_order)
-
-st.write("🔍 Secrets loaded:", "connections" in st.secrets)
-if "connections" in st.secrets:
-    st.write("Available connections:", list(st.secrets["connections"].keys()))
   
 cnx = st.connection("Snowflake")
 session = cnx.session()
